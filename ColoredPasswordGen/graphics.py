@@ -9,6 +9,9 @@ class Button:
     
     def draw(self, screen):
         pygame.draw.rect(screen, self.colour, (self.x, self.y, BUTTONSIZE, BUTTONSIZE))
+
+    def draw_done(self, screen):
+         pygame.draw.rect(screen, self.colour, (self.x, self.y, BUTTONSIZE, DONEBUTTONHEIGHT))
     
     def clicked(self, mouseX, mouseY):
         return self.x <= mouseX <= self.x + BUTTONSIZE and self.y <= mouseY <= self.y + BUTTONSIZE
