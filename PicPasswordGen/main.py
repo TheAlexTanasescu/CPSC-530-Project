@@ -14,7 +14,7 @@ def captureEvent(event, x, y, flags, param):
         row = y // cell_height
         col = x // cell_width
 
-        cell_num = row * 3 + col
+        cell_num = (row * 3 + col) + 1
 
         file.write(f"({x}, {y}), Cell {cell_num}")
         file.write("\n")

@@ -18,6 +18,10 @@ GRAY = (128, 128, 128)
 pattern = []
 current_position = None
 
+#Lookup table for coordinates
+{"1": (50, 50), "2": (150, 50), "3": (250, 50), "4": (50, 150), "5": (150, 150), "6": (250, 150), "7": (50, 250), "8": (150, 250), "9": (250, 250)}
+
+
 # Draw the grid lock pattern
 def draw_grid():
     for i in range(GRID_WIDTH):
