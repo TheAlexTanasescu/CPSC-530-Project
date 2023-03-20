@@ -14,12 +14,17 @@ BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 GRAY = (128, 128, 128)
 
+printPattern = []
+
 # Grid lock pattern state
 pattern = []
 current_position = None
 
 #Lookup table for coordinates
-{"1": (50, 50), "2": (150, 50), "3": (250, 50), "4": (50, 150), "5": (150, 150), "6": (250, 150), "7": (50, 250), "8": (150, 250), "9": (250, 250)}
+coordinatesLookup = {"1": (50, 50), "2": (150, 50), "3": (250, 50), "4": (50, 150), "5": (150, 150), "6": (250, 150), "7": (50, 250), "8": (150, 250), "9": (250, 250)}
+
+def get_keys_from_value(d, val):
+        return [k for k, v in d.items() if v == val]       
 
 
 # Draw the grid lock pattern
@@ -64,7 +69,9 @@ while running:
             cell = get_cell_for_point(event.pos)
             if cell is not None:
                 current_position = (cell[0] * GRID_SIZE + GRID_SIZE // 2, cell[1] * GRID_SIZE + GRID_SIZE // 2)
+                cellNum = get_keys_from_value(coordinatesLookup, current_position)
                 pattern.append(current_position)
+                printPattern.append(cellNum)
         elif event.type == pygame.MOUSEMOTION:
             # Continue drawing the pattern
             if current_position is not None:
@@ -79,4 +86,4 @@ while running:
     pygame.display.flip()
 
 # Output the pattern coordinates
-print(pattern)
+print(printPattern, "Length is " + str(len(printPattern)))
