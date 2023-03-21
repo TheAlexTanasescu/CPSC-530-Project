@@ -2,7 +2,7 @@ import cv2
 import random
 
 
-file = open("picPasswords.txt", "a")
+file = open("AlexPicPasswords.txt", "a")
 def captureEvent(event, x, y, flags, param):
     global clicked 
     if event == cv2.EVENT_LBUTTONDOWN and not clicked:
