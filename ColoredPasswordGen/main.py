@@ -55,7 +55,7 @@ class PasswordGen:
             pwdStr = ""
             for item in password:
                 pwdStr += str(item)            
-            with open("AlexColorPasswords.txt", "a") as file:
+            with open("RamezColorPasswords.txt", "a") as file:
                 file.write(pwdStr)
                 file.write("\n")
             self.pattern = []
