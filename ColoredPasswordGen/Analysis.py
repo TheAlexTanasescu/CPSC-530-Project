@@ -1,6 +1,6 @@
 
 # Open the file and read the contents
-with open('All_Android_Passwords.txt', 'r') as f:
+with open('All_Colored_Passwords.txt', 'r') as f:
     contents = f.read()
 
 # Split the contents into individual lists
@@ -21,8 +21,8 @@ totalCount = 0
 #
 #  Loop through each list and count the element
 for i, lst in enumerate(lists):
-    temp = lst.split(',')
-    count = temp[0].count(element)
+    #temp = lst.split(',')
+    count = lst.count(element)
     print(f"List {i+1}: {count} occurrences of {element}")
     totalCount += count
 
