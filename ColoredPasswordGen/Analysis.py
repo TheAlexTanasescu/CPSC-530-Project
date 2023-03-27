@@ -23,7 +23,7 @@ totalCount = 0
 for i, lst in enumerate(lists):
     #temp = lst.split(',')
     count = lst.count(element)
-    print(f"List {i+1}: {count} occurrences of {element}")
+    #print(f"List {i+1}: {count} occurrences of {element}")
     totalCount += count
 
 # Count the element in all lists

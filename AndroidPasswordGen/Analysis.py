@@ -16,17 +16,17 @@ for list in lists:
     '''
 # Get the element to count
 element = input("Enter the element to count: ")
-
 totalCount = 0
 #
 #  Loop through each list and count the element
 for i, lst in enumerate(lists):
     temp = lst.split(',')
     count = temp[0].count(element)
-    print(f"List {i+1}: {count} occurrences of {element}")
+    #print(f"List {i+1}: {count} occurrences of {element}")
     totalCount += count
 
 # Count the element in all lists
 #total_count = sum(lst.count(element) for lst in lists)
+
 print(f"\nTotal occurrences of {element} in all lists: {totalCount}")
 
