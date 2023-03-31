@@ -2,6 +2,7 @@ import pygame
 from settings import *
 from graphics import *
 
+
 pygame.init()
 class PasswordGen:
     def __init__(self):
@@ -88,6 +89,8 @@ class PasswordGen:
 gen = PasswordGen()
 while True:
     gen.run()
+
+
 
 
 

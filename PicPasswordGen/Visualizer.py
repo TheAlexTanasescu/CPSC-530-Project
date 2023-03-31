@@ -1,3 +1,4 @@
+
 import pygame
 
 # Initialize Pygame
@@ -11,17 +12,16 @@ CIRCLE_SIZE = 50
 
 # Define colors
 WHITE = (255, 255, 255)
-GREENS = [(204, 255, 204), (153, 255, 153), (51, 255, 51), (0, 255, 0), (0, 153, 0), (0, 102, 0)]
+GREENS = [(204, 255, 204), (153, 255, 153), (0, 204, 0), (0, 153, 0)]
 
 # Define intensity levels (from 1 to 20)
-intensity_levels = [[2, 5, 4],
-                    [3, 4, 4],
-                    [6, 3, 1]]
+intensity_levels = [[1, 1, 1],
+                    [2, 4, 3],
+                    [1, 1, 1]]
 
 # Create the screen
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-pygame.display.set_caption("Color Visualizer")
-myfont = pygame.font.SysFont('Comic Sans MS', 20)
+pygame.display.set_caption("Image 2 Visualizer")
 
 # Draw the grid
 grid_color = WHITE
@@ -41,9 +41,6 @@ for row in range(GRID_SIZE):
         x = col * cell_size + cell_size // 2
         y = row * cell_size + cell_size // 2
         pygame.draw.circle(screen, circle_color, (x, y), CIRCLE_SIZE // 2)
-text = myfont.render('Done', False, (255, 255, 255))
-#screen.blit(text, (300, 360))
-#screen.blit(text, (180, 360))
 
 # Update the display
 pygame.display.update()

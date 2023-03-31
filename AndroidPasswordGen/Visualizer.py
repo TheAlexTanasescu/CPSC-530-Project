@@ -15,8 +15,8 @@ GREENS = [(204, 255, 204), (153, 255, 153), (0, 204, 0), (0, 153, 0)]
 
 # Define intensity levels (from 1 to 20)
 intensity_levels = [[4, 2, 3],
-                    [4, 3, 3],
-                    [4, 1, 4]]
+                    [4, 3, 4],
+                    [4, 2, 4]]
 
 # Create the screen
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))

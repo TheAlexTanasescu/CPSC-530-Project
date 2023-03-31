@@ -86,7 +86,7 @@ while running:
     pygame.display.flip()
 
 # Output the pattern coordinates
-with open("MattAndroidPasswords.txt", "a") as file:
+with open("Passwords.txt", "a") as file:
     file.write(''.join(str(x) for x in printPattern))
     file.write(", Length is " + str(len(printPattern)))
     file.write("\n")
