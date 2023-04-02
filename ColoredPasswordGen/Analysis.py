@@ -1,3 +1,4 @@
+from collections import Counter
 
 # Open the file and read the contents
 with open('All_Colored_Passwords.txt', 'r') as f:
@@ -5,11 +6,21 @@ with open('All_Colored_Passwords.txt', 'r') as f:
 
 # Split the contents into individual lists
 
-lists = contents.split('\n')
+passwords = contents.split('\n')
+
+
 
 # Get the element to count
 element = input("Enter the element to count: ")
 
+count = 0
+for lst in passwords:
+    if element in lst:
+        count += 1
+
+print(f"Number of passwords containing {element}: {count}")
+
+'''
 totalCount = 0
 
 #  Loop through each list and count the element
@@ -37,3 +48,4 @@ for length in length_counts:
     #else:
      #   print(f"\nNo passwords found with length {length}")
 
+'''

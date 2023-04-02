@@ -9,6 +9,16 @@ lists = contents.split('\n')
 
 # Get the element to count
 element = input("Enter the element to count: ")
+
+
+count = 0
+for lst in lists:
+    if element in lst:
+        count += 1
+
+print(f"Number of passwords containing {element}: {count}")
+
+'''
 totalCount = 0
 
 for i, lst in enumerate(lists):
@@ -34,3 +44,4 @@ for length in range(12):
         print(f"\nTotal occurrences of passwords with length {length}: {length_counts[length]}")
     else:
         print(f"\nNo passwords found with length {length}")
+'''
